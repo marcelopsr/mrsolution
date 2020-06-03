@@ -142,6 +142,25 @@
       font-size: 90%;
       margin: 2rem;
     }
+    .inline-photo {
+      border: 1em solid #fff;
+      border-bottom: 4em solid #fff;
+      border-radius: .25em;
+      box-shadow: 1em 1em 2em .25em rgba(0, 0, 0, .2);
+      margin: 2em auto;
+      opacity: 0;
+      transform: translateY(4em) rotateZ(-5deg);
+      transition: transform 4s .25s cubic-bezier(0, 1, .3, 1),
+        opacity .3s .25s ease-out;
+      max-width: 600px;
+      width: 90%;
+      will-change: transform, opacity;
+    }
+
+    .inline-photo.is-visible {
+      opacity: 1;
+      transform: rotateZ(-2deg);
+    }
   </style>
 </head>
 
@@ -159,19 +178,21 @@
         <ul>
           <li class="active"><a href="index.html">Inicio</a></li>
           <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="institucional.html">Institucional</a></li>
           <li><a href="galeria.html">Galeria</a></li>
           <li class="drop-down"><a href="">Plagas</a>
             <ul>
-              <li><a href="covid.html">COVID-19</a></li>
               <li><a href="dengue.html">Dengue</a></li>
               <li><a href="cucarachas.html">Cucarachas</a></li>
               <li><a href="termitas.html">Termitas</a></li>
+              <li><a href="covid.html">COVID 19</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
+
 
     </div>
   </header><!-- End Header -->
@@ -590,10 +611,11 @@
   <footer id="footer">
     <div class="container">
       <h3>Mr. Solution</h3>
-      <p>Consúltenos sobre el manejo integrado de plagas y gustosamente le brindaremos un servicio profesional y garantizado.</p>
+      <p>Consúltenos sobre el manejo integrado de plagas y gustosamente le brindaremos un servicio profesional y
+        garantizado.</p>
       <div class="social-links">
-        <div class="btn btn-primary btn-lg btn3d"><i class="bx bxl-facebook" onclick="window.open('https://www.facebook.com/fumigacion81/','Mr.Solution')"></i></div>
-        <div class="btn btn-success btn-lg btn3d"><i class="bx bxl-whatsapp" onclick="window.open('https://wa.link/t2u4jx/','Mr.Solution')"></i></div>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="whatsapp"><i class="bx bxl-instagram"></i></a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -611,6 +633,7 @@
   <script src="assets/vendor/counterup/counterup.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/js/show-on-scroll.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
