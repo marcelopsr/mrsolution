@@ -27,13 +27,57 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/swiper.min.css">
 
-  <!-- =======================================================
-  * Template Name: MeFamily - v2.0.0
-  * Template URL: https://bootstrapmade.com/family-multipurpose-html-bootstrap-template-free/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 40px;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      background: #000;
+    }
+    .swiper-slide {
+      font-size: 18px;
+      color:#fff;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 40px 60px;
+    }
+    .parallax-bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 130%;
+      height: 100%;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center;
+    }
+    .swiper-slide .title {
+      font-size: 41px;
+      font-weight: 300;
+    }
+    .swiper-slide .subtitle {
+      font-size: 21px;
+    }
+    .swiper-slide .text {
+      font-size: 14px;
+      max-width: 400px;
+      line-height: 1.3;
+    }
+
+  </style>
 </head>
 
 
@@ -72,64 +116,51 @@
     </div>
   </header><!-- End Header -->
 
- <!--Carousel Wrapper-->
-<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-  <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-2" data-slide-to="1"></li>
-    <li data-target="#carousel-example-2" data-slide-to="2"></li>
-  </ol>
-  <!--/.Indicators-->
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-      <div class="view">
-        <img class="d-block w-100" src="assets/img/gallery/fumigro-1.jpeg"
-          alt="First slide">
-        <div class="mask rgba-black-strong"></div>
-      </div>
-      <div class="carousel-caption">
-        <p style="background-color:black; font-size:x-large;">Somos la solucion definitiva para tus problemas contra las plagas, contamos con una linea amplia de productos para el saneamiento ambiental, personal altamente calificado para estas tareas rigurosas </p>
+<!-- Swiper -->
+<div class="swiper-container">
+  <div class="parallax-bg" style="background-image:url(./assets/img/gallery/pest-control.png)" data-swiper-parallax="-23%"></div>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="text" data-swiper-parallax="-100">
+        <p style="background-color:black;">Somos la solucion definitiva para tus problemas contra las plagas, contamos con una linea amplia de productos para el saneamiento ambiental, personal altamente calificado para estas tareas rigurosas</p>
       </div>
     </div>
-    <div class="carousel-item">
-      <!--Mask color-->
-      <div class="view">
-        <img class="d-block w-100" src="assets/img/gallery/fumigro-3.jpeg"
-          alt="Second slide">
-        <div class="mask rgba-black-strong"></div>
-      </div>
-      <div class="carousel-caption">
-
-        <p style="background-color:black; font-size:x-large;">Eliminamos todo tipo de plagas que puedan existir en tu hogar, no volvera a tener problemas con esas cucarachas que contaminan sus alimentos, todos nuestros trabajos cuentan con garantia</p>
+    <div class="swiper-slide">
+      <div class="text" data-swiper-parallax="-100">
+        <p style="background-color:black;">Eliminamos todo tipo de plagas que puedan existir en tu hogar, no volvera a tener problemas con esas cucarachas que contaminan sus alimentos, todos nuestros trabajos cuentan con garantia</p>
       </div>
     </div>
-    <div class="carousel-item">
-      <!--Mask color-->
-      <div class="view">
-        <img class="d-block w-100" src="assets/img/gallery/pest-control.png"
-          alt="Third slide">
-        <div class="mask rgba-black-strong"></div>
-      </div>
-      <div class="carousel-caption">
-        <p style="background-color:black; font-size:x-large;">Realizamos el trabajo minuciosamente con el fin de que no haya un rincon inseguro, cada trabajo se realiza con productos no toxicos para el medio ambiente.</p>
+    <div class="swiper-slide">
+      <div class="text" data-swiper-parallax="-100">
+        <p style="background-color:black;">Realizamos el trabajo minuciosamente con el fin de que no haya un rincon inseguro, cada trabajo se realiza con productos no toxicos para el medio ambiente.</p>
       </div>
     </div>
   </div>
-  <!--/.Slides-->
-  <!--Controls-->
-  <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Anterior</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Siguiente</span>
-  </a>
-  <!--/.Controls-->
+  <!-- Add Pagination -->
+  <div class="swiper-pagination swiper-pagination-black"></div>
+  <!-- Add Navigation -->
+  <div class="swiper-button-prev swiper-button-black"></div>
+  <div class="swiper-button-next swiper-button-black"></div>
 </div>
-<!--/.Carousel Wrapper-->
+
+<!-- Swiper JS -->
+<script src="assets/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    speed: 600,
+    parallax: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
                                                               <!-- Contenido -->
   <main id="main">
     
@@ -173,7 +204,7 @@
             <div class="col-lg-4">
               <div class="our-team-main">
                 <div class="team-front" style="background-color:lightblue;">
-                 <img src="assets/icons/blood.png" class="img-fluid"/>
+                 <img src="../assets/icons/blood.png" class="img-fluid"/>
                   <h3>Dengue</h3>
                 </div>
                 <div class="team-back">
